@@ -1,0 +1,82 @@
+/* Define um fundo azul suave */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #e3f2fd; /* Azul claro suave */
+}
+
+/* Caixa centralizada e estilizada */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 90%;
+    width: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste da imagem */
+.banner {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Título chamativo */
+h1 {
+    font-size: 26px;
+    color: #1565c0; /* Azul mais forte */
+    font-weight: bold;
+}
+
+/* Texto do convite */
+p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estiliza botões */
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 18px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+}
