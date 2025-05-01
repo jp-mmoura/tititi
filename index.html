@@ -1,22 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite - Festa Entre Amigas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f7e9f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header {
+      background: url('image.jpg') no-repeat center center/cover;
+      padding: 40px 20px;
+      border-radius: 10px;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* Camada de sombra para legibilidade */
+      border-radius: 10px;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .content {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .details {
+      margin: 20px 0;
+      font-size: 1em;
+      color: #555;
+    }
+
+    .details h3 {
+      color: #d81b60;
+      margin-bottom: 10px;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #25D366;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebe57;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .content p {
+        font-size: 1em;
+      }
+
+      .btn-whatsapp {
+        padding: 12px 25px;
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="banner.jpg" alt="Imagem de balões" class="banner">
-        <h1>Vamos comemorar o dom da vida!</h1>
-        <p>Creio que todas nós temos muitos motivos pra comemorar.</p>
-        <p>Aguardo vocês amanhã <strong>03/04/2025</strong> a partir das <strong>19:30</strong> em minha casa!</p>
-        <p><strong>Local:</strong> Rua B, número 1000, apartamento 107, bloco D1</p>
-        <p><strong>Bairro:</strong> Augusta Mota - Condomínio Saint Michel</p>
-        <button id="confirmar">Confirmação</button>
+  <div class="container">
+    <header>
+      <h1>Festa Entre Amigas</h1>
+      <p>Nosso encontro mensal está chegando!</p>
+    </header>
+
+    <div class="content">
+      <p>Queridas amigas, é hora de nos reunirmos para mais uma noite cheia de risadas, histórias e carinho!</p>
+      <div class="details">
+        <h3>Detalhes do Evento</h3>
+        <p><strong>Data:</strong> 09 de Maio de 2025</p>
+        <p><strong>Horário:</strong> 19:00</p>
+        <p><strong>Local:</strong> Casa da Andrea - Rua Porto Seguro, 1100 - Ibituruna</p>
+        <p><strong>Condomínio Portal das Acácias, Casa 92</strong></p>
+      </div>
+      <a href="https://wa.me/5538988161516?text=Oi!%20Confirmo%20minha%20presença%20na%20Festa%20Entre%20Amigas!" class="btn-whatsapp" target="_blank">Confirmar Presença</a>
     </div>
 
-    <script src="script.js"></script>
+    <footer>
+      <p>Feito com carinho para nossas amigas especiais!</p>
+    </footer>
+  </div>
+
+  <script>
+    // Adiciona uma animação suave ao carregar a página
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.container');
+      container.style.opacity = '0';
+      container.style.transition = 'opacity 1s ease';
+      setTimeout(() => {
+        container.style.opacity = '1';
+      }, 100);
+    });
+  </script>
 </body>
 </html>
